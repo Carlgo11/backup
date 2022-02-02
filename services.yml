@@ -1,0 +1,5 @@
+services:
+  Basic:
+    path: BasicBackup.sh
+  Mailcow:
+    path: Mailcow.sh

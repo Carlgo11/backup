@@ -1,0 +1,8 @@
+version: "3.7"
+services:
+  backup:
+    build: .
+    volumes:
+      - "./ssh.key:/ssh.key:ro"
+      - "./Backups:/Backups"
+      - "./ssh_config:/root/.ssh/config"
