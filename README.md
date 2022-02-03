@@ -3,6 +3,20 @@
 This program makes remote connections through SSH to specified servers and downloads predefined paths into compressed
 files.
 
+## Table of Contents
+
+* [Installation](#installation)
+    + [Docker configuration](#docker-configuration)
+        - [Example](#example)
+    + [Available Services](#available-services)
+        - [Basic](#basic)
+            * [Example](#example-1)
+            * [Variables](#variables)
+        - [MailCow](#mailcow)
+            * [Example](#example-2)
+            * [Variables](#variables-1)
+* [Usage](#usage)
+
 ## Installation
 
 1. Make a Docker Compose file.
