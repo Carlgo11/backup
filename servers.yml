@@ -1,9 +1,9 @@
 servers:
-  mvps:
+  server:
     services:
       Mailcow:
         type: MailCow
         path: "/backups/mailcow/*"
       Nginx:
-        path: "/docker/nginx/"
+        path: "/etc/nginx/"
         type: Basic

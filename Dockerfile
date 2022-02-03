@@ -1,8 +1,10 @@
 FROM alpine:latest
-RUN apk add --no-cache rsync openssh ruby tar
 
-COPY ./Services /Services/
-COPY ["backup.rb", "servers.yml", "services.yml" ,"/"]
-RUN chmod +x /backup.rb
+ENV ssh_config=/root/.ssh/config
+
+COPY ["backup.rb", "servers.yml", "Services", "services.yml" ,"/"]
+
+RUN apk add --no-cache rsync openssh ruby tar; \
+    chmod +x /backup.rb
 
 ENTRYPOINT "/backup.rb"

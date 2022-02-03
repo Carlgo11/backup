@@ -8,8 +8,6 @@ services_path = './Services/'
 servers = YAML.load_file('servers.yml')['servers']
 services = YAML.load_file('services.yml')['services']
 
-`chown root:root ~/.ssh/config;`
-
 servers.each do |server, data|
   data['services'].each do |service_name, service_data|
     next unless services.key? service_data['type']
@@ -27,5 +25,3 @@ servers.each do |server, data|
     end
   end
 end
-
-`chown 1000:1000 -R /Backups;chmod 700 -R /Backups`
