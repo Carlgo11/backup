@@ -3,8 +3,6 @@
 
 require 'yaml'
 
-services_path = './Services/'
-
 servers = YAML.load_file('servers.yml')['servers']
 services = YAML.load_file('services.yml')['services']
 
@@ -15,7 +13,7 @@ servers.each do |server, data|
     puts "Running #{service_name} for #{server}..."
 
     # Service executable full path
-    service = "#{services_path}#{services[service_data['type']]['path']}"
+    service = "#{ENV['services_path']}#{services[service_data['type']]['path']}"
 
     # Run service
     if service_data['type'].eql?('Basic')
